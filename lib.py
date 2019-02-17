@@ -1,6 +1,6 @@
 import struct
 
-def binary(i: int) -> int:
+def binary(i: int) -> bytes:
     r = str(i%2)
     s = int(i/2)
     while s >= 1:
@@ -30,10 +30,6 @@ def four2three():
     print(t)
     byte_nums = [str("0000000" + bin(i)[2:])[-8:] for i in list(t)]
     print(int_from_binary_str("0b" + "".join(byte_nums[0:3])))
-
-
-
-    pass
 
 
 if __name__ == "__main__":
